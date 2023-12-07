@@ -50,8 +50,7 @@ function SignUpForm() {
       </div>
 
       <div className="mb-3 alert alert-warning">
-        <span className="fs-6">Log-in </span>
-        <Link to="/">Link</Link>
+        <Link to="/"><span className="fs-6">Log-in </span></Link>
       </div>
 
       <button type="submit" className="btn btn-primary">

@@ -41,8 +41,7 @@ function SignInForm() {
       </div>
 
       <div className="mb-3 alert alert-warning">
-        <span className="fs-6">Sign-up </span>
-        <Link to="/sign-up">Link</Link>
+        <Link to="/sign-up"><span className="fs-6">Sign-up </span></Link>
       </div>
 
       <button type="submit" className="btn btn-primary">
