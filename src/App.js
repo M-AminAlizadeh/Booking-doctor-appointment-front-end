@@ -8,6 +8,7 @@ import Layout from './pages/Layout';
 import DoctorsList from './components/DoctorsList';
 import Reservations from './components/Reservations';
 import AddReservation from './components/AddReservation';
+import NotFound from './components/NotFound';
 
 const App = createBrowserRouter([
   // Before Authentication
@@ -31,6 +32,10 @@ const App = createBrowserRouter([
   {
     path: '/add-reservation',
     element: <Layout component={<AddReservation />} />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ]);
 
