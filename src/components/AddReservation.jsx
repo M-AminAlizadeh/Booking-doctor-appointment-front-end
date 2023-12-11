@@ -1,11 +1,11 @@
 import React from 'react';
 
-const AddReservation = function () {
+function AddReservation() {
   return (
     <div>
       <p>Add reservation</p>
     </div>
   );
-};
+}
 
 export default AddReservation;
