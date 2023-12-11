@@ -27,10 +27,13 @@ function Navbar() {
               <Link to="/" className="remove-underline-from-links text-secondary">Doctors List</Link>
             </li>
             <li className="list-group-item fw-bold fs-5 cursor-pointer">
+              <Link to="/reservations" className="remove-underline-from-links text-secondary">My Reservations</Link>
+            </li>
+            <li className="list-group-item fw-bold fs-5 cursor-pointer">
               <Link to="/add-reservation" className="remove-underline-from-links text-secondary">Add Reservation</Link>
             </li>
             <li className="list-group-item fw-bold fs-5 cursor-pointer">
-              <Link to="/reservations" className="remove-underline-from-links text-secondary">My Reservations</Link>
+              <Link to="/delete-reservation" className="remove-underline-from-links text-secondary">Delete Reservation</Link>
             </li>
           </ul>
 

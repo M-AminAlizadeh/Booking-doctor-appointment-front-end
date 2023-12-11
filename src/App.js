@@ -8,6 +8,7 @@ import Layout from './pages/Layout';
 import DoctorsList from './components/DoctorsList';
 import Reservations from './components/Reservations';
 import AddReservation from './components/AddReservation';
+import DeleteReservation from './components/DeleteReservation';
 import NotFound from './components/NotFound';
 
 const App = createBrowserRouter([
@@ -32,6 +33,10 @@ const App = createBrowserRouter([
   {
     path: '/add-reservation',
     element: <Layout component={<AddReservation />} />,
+  },
+  {
+    path: '/delete-reservation',
+    element: <Layout component={<DeleteReservation />} />,
   },
   {
     path: '*',
