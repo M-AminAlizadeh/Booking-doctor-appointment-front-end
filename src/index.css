@@ -25,6 +25,7 @@
   color: #fff !important;
 }
 
-/* .bg-primary-light-green {
+/* Carousel */
+.carousel-btns:hover {
   background-color: var(--primary-color-light-green);
-} */
+}
