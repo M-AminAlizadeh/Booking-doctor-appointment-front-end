@@ -4,8 +4,8 @@ import Navbar from '../components/Navbar';
 
 function Layout({ component }) {
   return (
-    <div className="d-flex">
-      <Navbar />
+    <div className="d-flex w-100 justify-content-between">
+      <Navbar className="border" />
       {component}
     </div>
   );
