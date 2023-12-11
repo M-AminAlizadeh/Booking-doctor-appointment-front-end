@@ -4,6 +4,27 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color-light-green: #97bf0f;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
+
+/* Links hover effect */
+.remove-underline-from-links {
+  text-decoration: none;
+}
+
+.navbar-links-group li:hover {
+  background-color: var(--primary-color-light-green);
+}
+
+.navbar-links-group li:hover .remove-underline-from-links {
+  color: #fff !important;
+}
+
+/* .bg-primary-light-green {
+  background-color: var(--primary-color-light-green);
+} */
