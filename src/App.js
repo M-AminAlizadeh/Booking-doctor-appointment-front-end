@@ -4,20 +4,43 @@ import {
 } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
-import HomePage from './pages/HomePage';
+import Layout from './pages/Layout';
+import DoctorsList from './components/DoctorsList';
+import Reservations from './components/Reservations';
+import AddReservation from './components/AddReservation';
+import DeleteReservation from './components/DeleteReservation';
+import NotFound from './components/NotFound';
 
 const App = createBrowserRouter([
+  // Before Authentication
   {
-    path: '/',
+    path: '/log-in',
     element: <LoginPage />,
   },
   {
     path: '/sign-up',
     element: <SignUpPage />,
   },
+  // After Authentication
   {
-    path: 'home',
-    element: <HomePage />,
+    path: '/',
+    element: <Layout component={<DoctorsList />} />,
+  },
+  {
+    path: '/reservations',
+    element: <Layout component={<Reservations />} />,
+  },
+  {
+    path: '/add-reservation',
+    element: <Layout component={<AddReservation />} />,
+  },
+  {
+    path: '/delete-reservation',
+    element: <Layout component={<DeleteReservation />} />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
   },
 ]);
 
