@@ -28,7 +28,6 @@
 /* Carousel */
 .carousel-btns:hover {
   background-color: var(--primary-color-light-green);
-  color: red
 }
 
 .turn-back-btn-bg {
