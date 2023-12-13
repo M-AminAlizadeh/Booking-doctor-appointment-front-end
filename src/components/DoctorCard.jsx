@@ -33,7 +33,7 @@ function DoctorCard({ doctor }) {
             </Link>
           </li>
         </ul>
-        <Link to="/" className="btn btn-info text-white w-100">Details</Link>
+        <Link to={`/doctors/${doctor.id}`} className="btn btn-info text-white w-100">Details</Link>
       </div>
     </div>
   );
