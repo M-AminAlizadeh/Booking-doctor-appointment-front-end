@@ -9,6 +9,7 @@ import DoctorsList from './components/DoctorsList';
 import Reservations from './components/Reservations';
 import AddReservation from './components/AddReservation';
 import DeleteReservation from './components/DeleteReservation';
+import DoctorDetails from './components/DoctorDetails';
 import NotFound from './components/NotFound';
 
 const App = createBrowserRouter([
@@ -25,6 +26,16 @@ const App = createBrowserRouter([
   {
     path: '/',
     element: <Layout component={<DoctorsList />} />,
+    // children: [
+    //   {
+    //     path: 'doctors/:id',
+    //     element: <DoctorDetails />,
+    //   },
+    // ],
+  },
+  {
+    path: '/doctors/:id',
+    element: <Layout component={<DoctorDetails />} />,
   },
   {
     path: '/reservations',
@@ -38,6 +49,7 @@ const App = createBrowserRouter([
     path: '/delete-reservation',
     element: <Layout component={<DeleteReservation />} />,
   },
+  // Not found
   {
     path: '*',
     element: <NotFound />,
