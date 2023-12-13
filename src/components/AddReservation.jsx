@@ -9,7 +9,7 @@ function AddReservation() {
   return (
     <div className="w-75 min-vh-100">
       <h1 className="my-5">Add a new Reservation Form</h1>
-      <form className="w-25 d-flex border flex-column gap-4">
+      <form className="w-50 d-flex flex-column gap-4">
         {/* username(autofilled) */}
         <div className="form-group">
           <label htmlFor="exampleFormControlInput1">
@@ -22,7 +22,7 @@ function AddReservation() {
         <div className="form-group">
           Date
           <br />
-          <DatePicker onChange={onChange} value={value} className="w-50" id="choose-date" />
+          <DatePicker onChange={onChange} value={value} className="w-25" id="choose-date" />
         </div>
 
         {/* Doctor */}
