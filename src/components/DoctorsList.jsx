@@ -1,11 +1,9 @@
 /* eslint-disable */
 import { useState, useEffect } from 'react';
 import DoctorCard from './DoctorCard';
-
 export default function DoctorsList() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [doctorsList, setDoctorsList] = useState([]);
-
   useEffect(() => {
     const fetchData = async () => {
       const APITOKEN = window.sessionStorage.getItem('APITOKEN');
@@ -29,7 +27,6 @@ export default function DoctorsList() {
     };
     fetchData();
   }, []);
-
   const handleNextBtn = () => {
     if (currentSlide + 3 === doctorsList.length) {
       setCurrentSlide(0);
@@ -37,7 +34,6 @@ export default function DoctorsList() {
       setCurrentSlide(currentSlide + 1);
     }
   };
-
   const handlePreviousBtn = () => {
     if (currentSlide === 0) {
       setCurrentSlide(doctorsList.length - 3);
@@ -45,7 +41,6 @@ export default function DoctorsList() {
       setCurrentSlide(currentSlide - 1);
     }
   };
-
   return (
     <div className="d-flex flex-column justify-content-center align-items-center w-100 vh-100">
       <h1 className="fw-bold text-uppercase">Doctors List</h1>
