@@ -71,7 +71,6 @@ export function AuthWrapper() {
         password,
       }),
     });
-    console.log(response);
     if (response.ok) {
       const responseData = await response.json();
       console.log(responseData);
