@@ -10,10 +10,3 @@ function App() {
   );
 }
 export default App;
-
-// // Not found
-// {
-//   path: '*',
-//   element: <NotFound />,
-// },
-// ]);
