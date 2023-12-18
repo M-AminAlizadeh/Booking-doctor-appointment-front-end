@@ -17,11 +17,11 @@
   text-decoration: none;
 }
 
-.navbar-links-group li:hover {
+.navbar-links-group a:hover {
   background-color: var(--primary-color-light-green);
 }
 
-.navbar-links-group li:hover .remove-underline-from-links {
+.navbar-links-group a:hover {
   color: #fff !important;
 }
 

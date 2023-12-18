@@ -31,23 +31,13 @@ function Navbar() {
           </Link>
           <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" />
         </div>
-        <div className="offcanvas-body d-flex flex-column align-items-between justify-content-between border bg-info">
+        <div className="offcanvas-body d-flex flex-column align-items-between justify-content-between">
           <ul className="list-group list-group-flush text-uppercase navbar-links-group mt-5">
-            <li className="list-group-item fw-bold fs-5 cursor-pointer">
-              <Link to="/" className="remove-underline-from-links text-secondary">Doctors List</Link>
-            </li>
-            <li className="list-group-item fw-bold fs-5 cursor-pointer">
-              <Link to="/reservations" className="remove-underline-from-links text-secondary">My Reservations</Link>
-            </li>
-            <li className="list-group-item fw-bold fs-5 cursor-pointer">
-              <Link to="/add-reservation" className="remove-underline-from-links text-secondary">Add Reservation</Link>
-            </li>
-            <li className="list-group-item fw-bold fs-5 cursor-pointer">
-              <Link to="/delete-reservation" className="remove-underline-from-links text-secondary">Delete Reservation</Link>
-            </li>
-            <li className="list-group-item fw-bold fs-5 cursor-pointer">
-              <Link to="/log-in" className="remove-underline-from-links text-secondary" onClick={submitSignout}>Sign out</Link>
-            </li>
+            <Link to="/" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer">Doctors List</Link>
+            <Link to="/reservations" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer">My Reservations</Link>
+            <Link to="/add-reservation" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer">Add Reservation</Link>
+            <Link to="/delete-reservation" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer">Delete Reservation</Link>
+            <Link to="/log-in" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer" onClick={submitSignout}>Sign out</Link>
           </ul>
 
           <footer className="text-lg-start bg-body-tertiary text-muted p-1">
