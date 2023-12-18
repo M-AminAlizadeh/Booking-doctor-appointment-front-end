@@ -16,7 +16,7 @@ function Navbar() {
   const submitSignout = (e) => {
     e.preventDefault();
     signout();
-    navigate('/');
+    navigate('/log-in');
   };
 
   return (
