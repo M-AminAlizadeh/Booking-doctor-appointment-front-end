@@ -92,8 +92,19 @@ export function AuthWrapper() {
     }
   };
 
+  const signout = () => {
+    setUser({
+    token: '',
+    userName: '',
+    email: '',
+    errorMsg: '', 
+    isAuthenticated: false,
+    });
+    window.sessionStorage.clear();
+  }
+
   return (
-    <AuthContext.Provider value={{ user, login, signup }}>
+    <AuthContext.Provider value={{ user, login, signup, signout }}>
       <RenderNavigation />
     </AuthContext.Provider>
   );
