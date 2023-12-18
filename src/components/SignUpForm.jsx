@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Link, useNavigate,
 } from 'react-router-dom';
@@ -13,6 +13,16 @@ function SignUpForm() {
   const [password, setPassword] = useState('');
   const [errorMsgTitle, setErrorMsgTitle] = useState(null);
 
+  useEffect(()=>{
+    if(user.isAuthenticated){
+      window.sessionStorage.setItem("APITOKEN",user.token);
+      navigate('/');
+    }else{
+      setErrorMsgTitle(user.errorMsg.error);
+      navigate('/sign-up')
+    }
+  },[user.isAuthenticated, user.token, user.errorMsg, navigate]);
+
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
   }
@@ -25,14 +35,7 @@ function SignUpForm() {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await signup(username,email,password);
-    if(user.isAuthenticated){
-      window.sessionStorage.setItem("APITOKEN",user.token);
-      navigate('/');
-    }else{
-      setErrorMsgTitle(user.errorMsg.error);
-      navigate('/sign-up')
-    }
+    signup(username,email,password);
   }
   return (
     <form className="p-3 bg-white rounded-2" onSubmit = {handleSubmit}>

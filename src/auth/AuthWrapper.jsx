@@ -73,7 +73,6 @@ export function AuthWrapper() {
     });
     if (response.ok) {
       const responseData = await response.json();
-      console.log(responseData);
       setUser({
         token: responseData.token,
         userName: responseData.user_details.name,
