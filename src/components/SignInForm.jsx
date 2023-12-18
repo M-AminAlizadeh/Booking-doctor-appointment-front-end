@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Link, useNavigate,
 } from 'react-router-dom';
@@ -12,6 +12,16 @@ function SignInForm() {
   const [password, setPassword] = useState('');
   const [errorMsgTitle, setErrorMsgTitle] = useState(null);
 
+  useEffect(()=>{
+    if (user.isAuthenticated) {
+      window.sessionStorage.setItem('APITOKEN', user.token);
+      navigate('/');
+    } else if (user.errorMsg) {
+      setErrorMsgTitle(user.errorMsg.error);
+      navigate('/log-in');
+    }
+  },[user.isAuthenticated, user.token, user.errorMsg, navigate])
+
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -21,14 +31,7 @@ function SignInForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await login(email, password);
-    if(user.isAuthenticated){
-      window.sessionStorage.setItem("APITOKEN",user.token);
-      navigate('/');
-    }else{
-      setErrorMsgTitle(user.errorMsg.error);
-      navigate('/log-in');
-    }
+    login(email, password);
   };
 
   return (
