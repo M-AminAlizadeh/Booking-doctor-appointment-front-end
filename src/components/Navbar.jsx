@@ -1,13 +1,23 @@
+/* eslint-disable import/no-cycle */
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import { AuthData } from '../auth/AuthWrapper';
 
 function Navbar() {
   const [year, setYear] = useState();
+  const { signout } = AuthData();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const currentYear = new Date().getFullYear();
     setYear(currentYear);
   }, []);
+
+  const submitSignout = (e) => {
+    e.preventDefault();
+    signout();
+    navigate('/');
+  };
 
   return (
     <div className="mx-5 my-2">
@@ -21,7 +31,7 @@ function Navbar() {
           </Link>
           <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" />
         </div>
-        <div className="offcanvas-body d-flex flex-column align-items-between justify-content-between">
+        <div className="offcanvas-body d-flex flex-column align-items-between justify-content-between border bg-info">
           <ul className="list-group list-group-flush text-uppercase navbar-links-group mt-5">
             <li className="list-group-item fw-bold fs-5 cursor-pointer">
               <Link to="/" className="remove-underline-from-links text-secondary">Doctors List</Link>
@@ -34,6 +44,9 @@ function Navbar() {
             </li>
             <li className="list-group-item fw-bold fs-5 cursor-pointer">
               <Link to="/delete-reservation" className="remove-underline-from-links text-secondary">Delete Reservation</Link>
+            </li>
+            <li className="list-group-item fw-bold fs-5 cursor-pointer">
+              <Link to="/log-in" className="remove-underline-from-links text-secondary" onClick={submitSignout}>Sign out</Link>
             </li>
           </ul>
 
