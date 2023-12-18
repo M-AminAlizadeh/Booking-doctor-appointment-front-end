@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 function DoctorCard({ doctor }) {
   return (
-    <div className="card w-100" key={Math.floor(Math.random() * 1000)}>
+    <div className="card w-100">
       <img
-        src={doctor.image_url}
+        src={doctor.imageUrl}
         className="card-img-top"
         alt="..."
         height="300px"
