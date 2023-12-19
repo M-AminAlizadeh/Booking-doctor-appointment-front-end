@@ -24,7 +24,7 @@ function Navbar() {
       <img src="https://img.icons8.com/clouds/100/menu.png" alt="menu--v1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" className="cursor-pointer" />
       <div className="offcanvas offcanvas-start show" data-bs-scroll="true" data-bs-backdrop="false" tabIndex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
         <div className="offcanvas-header">
-          <Link to="/home" className="link-secondary link-offset-2 link-underline-opacity-25 remove-underline-from-links">
+          <Link to="/" className="link-secondary link-offset-2 link-underline-opacity-25 remove-underline-from-links">
             <h4 className="offcanvas-title fw-bold fst-italic" id="offcanvasScrollingLabel">
               Doc Reservation
             </h4>
