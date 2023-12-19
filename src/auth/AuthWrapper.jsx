@@ -1,9 +1,7 @@
 import {
-  useState, createContext, useContext, useEffect,
+  useState, createContext, useContext, useEffect, useMemo,
 } from 'react';
-import {
-  useNavigate,
-} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import RenderNavigation from './RenderNavigation';
 
 const AuthContext = createContext();
@@ -103,11 +101,18 @@ export function AuthWrapper() {
     window.sessionStorage.clear();
   };
 
+  const contextValue = useMemo(
+    () => ({
+      user,
+      login,
+      signup,
+      signout,
+    }),
+    [user, login, signup, signout],
+  );
+
   return (
-    <AuthContext.Provider value={{
-      user, login, signup, signout,
-    }}
-    >
+    <AuthContext.Provider value={contextValue}>
       <RenderNavigation />
     </AuthContext.Provider>
   );
