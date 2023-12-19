@@ -17,11 +17,8 @@
   text-decoration: none;
 }
 
-.navbar-links-group li:hover {
+.navbar-links-group a:hover {
   background-color: var(--primary-color-light-green);
-}
-
-.navbar-links-group li:hover .remove-underline-from-links {
   color: #fff !important;
 }
 
@@ -32,4 +29,23 @@
 
 .turn-back-btn-bg {
   background-color: var(--primary-color-light-green);
+}
+
+@media (max-width: 1450px) {
+  .carousel-btns,
+  .carousel-container {
+    display: none !important;
+  }
+
+  .scroll-mode-doctors-list {
+    display: flex !important;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .menu-button {
+    display: flex !important;
+  }
 }
