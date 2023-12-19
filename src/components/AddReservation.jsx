@@ -16,7 +16,6 @@ function AddReservation() {
     const fetchData = async () => {
       const APITOKEN = window.sessionStorage.getItem('APITOKEN');
       if (APITOKEN) {
-        // Name
         const responseUserInfo = await fetch('https://booking-doctor-iqa1.onrender.com/v1/users/fetch_current_user', {
           headers: {
             Authorization: `${APITOKEN}`,
@@ -26,7 +25,6 @@ function AddReservation() {
           const responseData = await responseUserInfo.json();
           setName(responseData.data.name);
         }
-        // doctors info
         const response = await fetch('https://booking-doctor-iqa1.onrender.com/v1/doctors', {
           headers: {
             Authorization: `${APITOKEN}`,

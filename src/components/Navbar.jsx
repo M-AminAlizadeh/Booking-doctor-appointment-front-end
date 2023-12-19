@@ -1,4 +1,3 @@
-/* eslint-disable import/no-cycle */
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AuthData } from '../auth/AuthWrapper';

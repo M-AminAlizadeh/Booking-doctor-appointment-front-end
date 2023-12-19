@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useState, useEffect } from 'react';
 import {
   Link, useNavigate,
@@ -13,32 +12,32 @@ function SignUpForm() {
   const [password, setPassword] = useState('');
   const [errorMsgTitle, setErrorMsgTitle] = useState(null);
 
-  useEffect(()=>{
-    if(user.isAuthenticated){
-      window.sessionStorage.setItem("APITOKEN",user.token);
+  useEffect(() => {
+    if (user.isAuthenticated) {
+      window.sessionStorage.setItem('APITOKEN', user.token);
       navigate('/');
-    }else{
+    } else {
       setErrorMsgTitle(user.errorMsg.error);
-      navigate('/sign-up')
+      navigate('/sign-up');
     }
-  },[user.isAuthenticated, user.token, user.errorMsg, navigate]);
+  }, [user.isAuthenticated, user.token, user.errorMsg, navigate]);
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
-  }
+  };
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    signup(username,email,password);
-  }
+    signup(username, email, password);
+  };
   return (
-    <form className="p-3 bg-white rounded-2" onSubmit = {handleSubmit}>
+    <form className="p-3 bg-white rounded-2" onSubmit={handleSubmit}>
       {errorMsgTitle ? (
         <div className="alert alert-danger" role="alert">
           {errorMsgTitle}
@@ -53,8 +52,8 @@ function SignUpForm() {
             id="username"
             aria-describedby="usernameHelp"
             required
-            value = {username}
-            onChange = {handleUsernameChange}
+            value={username}
+            onChange={handleUsernameChange}
           />
         </label>
       </div>
@@ -62,15 +61,15 @@ function SignUpForm() {
       <div className="mb-3">
         <label htmlFor="exampleInputEmail1" className="form-label">
           Email address
-          <input 
-            type="email" 
-            className="form-control" 
-            id="exampleInputEmail1" 
-            aria-describedby="emailHelp" 
+          <input
+            type="email"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
             required
-            value = {email}
-            onChange = {handleEmailChange}
-           />
+            value={email}
+            onChange={handleEmailChange}
+          />
         </label>
       </div>
 
@@ -82,8 +81,8 @@ function SignUpForm() {
             className="form-control w-100"
             id="exampleInputPassword1"
             required
-            value = {password}
-            onChange = {handlePasswordChange}
+            value={password}
+            onChange={handlePasswordChange}
           />
         </label>
       </div>

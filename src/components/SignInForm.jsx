@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useState, useEffect } from 'react';
 import {
   Link, useNavigate,
@@ -12,7 +11,7 @@ function SignInForm() {
   const [password, setPassword] = useState('');
   const [errorMsgTitle, setErrorMsgTitle] = useState(null);
 
-  useEffect(()=>{
+  useEffect(() => {
     if (user.isAuthenticated) {
       window.sessionStorage.setItem('APITOKEN', user.token);
       navigate('/');
@@ -20,7 +19,7 @@ function SignInForm() {
       setErrorMsgTitle(user.errorMsg.error);
       navigate('/log-in');
     }
-  },[user.isAuthenticated, user.token, user.errorMsg, navigate])
+  }, [user.isAuthenticated, user.token, user.errorMsg, navigate]);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);

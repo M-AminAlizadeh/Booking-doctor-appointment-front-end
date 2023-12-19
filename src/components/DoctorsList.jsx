@@ -1,6 +1,6 @@
-/* eslint-disable */
 import { useState, useEffect } from 'react';
 import DoctorCard from './DoctorCard';
+
 export default function DoctorsList() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [doctorsList, setDoctorsList] = useState([]);
