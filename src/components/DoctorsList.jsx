@@ -43,11 +43,11 @@ function DoctorsList({ doctorsList, setDoctors }) {
   };
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center w-100 vh-100">
+    <div className="d-flex flex-column justify-content-center align-items-center w-100 vh-300">
       <h1 className="fw-bold text-uppercase">Doctors List</h1>
       <p className="text-secondary">Please select a doctor</p>
       {/* carousel */}
-      <div className="d-flex justify-content-center align-items-center gap-4 w-75">
+      <div className="d-flex justify-content-center align-items-center gap-4 w-75 carousel-container">
         <button type="button" className="carousel-btns py-2 px-4 rounded-end-circle border-0" onClick={handlePreviousBtn}>
           <img src="https://img.icons8.com/pastel-glyph/50/000000/circled-chevron-left.png" alt="circled-chevron-left" />
         </button>
@@ -55,6 +55,10 @@ function DoctorsList({ doctorsList, setDoctors }) {
         <button type="button" className="carousel-btns py-2 px-4 rounded-start-pill border-0" onClick={handleNextBtn}>
           <img src="https://img.icons8.com/pastel-glyph/50/000000/circled-chevron-right.png" alt="circled-chevron-right" />
         </button>
+      </div>
+      {/* scroll mode */}
+      <div className="d-none flex-column flex-wrap justify-content-center align-items-center gap-5 w-100 scroll-mode-doctors-list mt-5">
+        {doctorsList.map((doctor) => <DoctorCard doctor={doctor} key={doctor.id} />)}
       </div>
     </div>
   );
