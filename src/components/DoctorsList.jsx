@@ -4,11 +4,9 @@ import { connect } from 'react-redux';
 import setDoctors from '../actions/doctorActions';
 import DoctorCard from './DoctorCard';
 
-// Use connect to connect the component to the Redux store
 function DoctorsList({ doctorsList, setDoctors }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Remove the local state for doctorsList, as it is now managed by Redux
   useEffect(() => {
     const fetchData = async () => {
       const APITOKEN = window.sessionStorage.getItem('APITOKEN');
@@ -49,7 +47,7 @@ function DoctorsList({ doctorsList, setDoctors }) {
       <h1 className="fw-bold text-uppercase">Doctors List</h1>
       <p className="text-secondary">Please select a doctor</p>
       {/* carousel */}
-      <div className="d-flex align-items-center gap-4 w-75">
+      <div className="d-flex justify-content-center align-items-center gap-4 w-75">
         <button type="button" className="carousel-btns py-2 px-4 rounded-end-circle border-0" onClick={handlePreviousBtn}>
           <img src="https://img.icons8.com/pastel-glyph/50/000000/circled-chevron-left.png" alt="circled-chevron-left" />
         </button>
@@ -62,12 +60,10 @@ function DoctorsList({ doctorsList, setDoctors }) {
   );
 }
 
-// Map Redux state to component props
 const mapStateToProps = (state) => ({
   doctorsList: state.doctor.doctorsList,
 });
 
-// Map Redux actions to component props
 const mapDispatchToProps = {
   setDoctors,
 };
@@ -75,13 +71,10 @@ const mapDispatchToProps = {
 DoctorsList.propTypes = {
   doctorsList: PropTypes.arrayOf(
     PropTypes.shape({
-      // Define the shape of each item in the array
       id: PropTypes.number.isRequired,
-      // ... other properties ...
     }),
   ).isRequired,
   setDoctors: PropTypes.func.isRequired,
 };
 
-// Connect the component to the Redux store
 export default connect(mapStateToProps, mapDispatchToProps)(DoctorsList);

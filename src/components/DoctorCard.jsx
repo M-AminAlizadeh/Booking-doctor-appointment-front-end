@@ -4,13 +4,12 @@ import PropTypes from 'prop-types';
 function DoctorCard({ doctor }) {
   return (
     <Link to={`/doctors/${doctor.id}`} className="remove-underline-from-links">
-      <div className="card border-dark" height="600px" width="300px">
+      <div className="card" style={{ height: '600px', width: '300px' }}>
         <img
           src={doctor.imageUrl}
           className="card-img-top"
           alt="..."
-          height="300px"
-          width="300px"
+          style={{ height: '300px', width: '100%', objectFit: 'cover' }}
         />
         <div className="card-body">
           <h4 className="card-title fw-bold text-center">{doctor.name}</h4>

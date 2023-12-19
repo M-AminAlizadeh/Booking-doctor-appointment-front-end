@@ -1,4 +1,3 @@
-/* eslint-disable import/no-cycle */
 import SignInForm from '../components/SignInForm';
 
 function LoginPage() {
