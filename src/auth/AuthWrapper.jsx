@@ -1,9 +1,10 @@
-/* eslint-disable */
-import { useState, createContext, useContext, useEffect } from 'react';
-import RenderNavigation from './RenderNavigation';
+import {
+  useState, createContext, useContext, useEffect,
+} from 'react';
 import {
   useNavigate,
 } from 'react-router-dom';
+import RenderNavigation from './RenderNavigation';
 
 const AuthContext = createContext();
 const APIURL = 'https://booking-doctor-iqa1.onrender.com/v1/users/';
@@ -18,14 +19,14 @@ export function AuthWrapper() {
   useEffect(() => {
     const storedToken = window.sessionStorage.getItem('APITOKEN');
     if (storedToken) {
-      setUser(prevUser => ({
+      setUser((prevUser) => ({
         ...prevUser,
         isAuthenticated: true,
       }));
     } else {
-      navigate('/log-in')
+      navigate('/log-in');
     }
-  }, []);
+  }, [navigate]);
 
   const login = async (email, password) => {
     const response = await fetch(`${APIURL}login`, {
@@ -93,17 +94,20 @@ export function AuthWrapper() {
 
   const signout = () => {
     setUser({
-    token: '',
-    userName: '',
-    email: '',
-    errorMsg: '', 
-    isAuthenticated: false,
+      token: '',
+      userName: '',
+      email: '',
+      errorMsg: '',
+      isAuthenticated: false,
     });
     window.sessionStorage.clear();
-  }
+  };
 
   return (
-    <AuthContext.Provider value={{ user, login, signup, signout }}>
+    <AuthContext.Provider value={{
+      user, login, signup, signout,
+    }}
+    >
       <RenderNavigation />
     </AuthContext.Provider>
   );

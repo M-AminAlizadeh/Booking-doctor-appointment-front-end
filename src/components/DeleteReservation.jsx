@@ -21,8 +21,6 @@ function DeleteReservation() {
           const responseData = await response.json();
           setError(responseData.error_message);
         }
-      } else {
-        console.log('you do not have authentication');
       }
     };
     fetchReservations();
@@ -44,8 +42,6 @@ function DeleteReservation() {
           (prevReservations) => prevReservations.filter((reservation) => reservation.id !== itemId),
         );
         setDeletedMsg('Delete Reservation Successfully');
-      } else {
-        console.log('error while deleting');
       }
     };
     responseDelete();

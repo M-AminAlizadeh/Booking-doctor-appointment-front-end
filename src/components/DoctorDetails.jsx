@@ -20,13 +20,7 @@ function DoctorDetails() {
         if (response.ok) {
           const responseData = await response.json();
           setSpecificDoctor(responseData);
-        } else {
-          // const responseData = await response.json();
-          // console.log(responseData);
-          console.log('error while fetching reload the page');
         }
-      } else {
-        console.log('NO info available');
       }
     };
     fetchData();

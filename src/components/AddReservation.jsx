@@ -74,7 +74,6 @@ function AddReservation() {
         },
         body: JSON.stringify({
           date_of_appointment: formattedDate,
-          // doctor: [selectedDoctorName],
           doctor_id: selectedDoctorId.toString(),
         }),
       });
@@ -82,7 +81,6 @@ function AddReservation() {
       if (response.ok) {
         const responseData = await response.json();
         setCreatedMsg(responseData.message);
-        console.log(responseData.message);
       }
     }
   };

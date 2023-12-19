@@ -1,4 +1,3 @@
-/* eslint-disable import/no-cycle */
 import LoginPage from '../pages/LoginPage';
 import Layout from '../pages/Layout';
 import DoctorsList from '../components/DoctorsList';

@@ -20,8 +20,6 @@ function Reservations() {
           const responseData = await response.json();
           setError(responseData.error_message);
         }
-      } else {
-        console.log('you do not have authentication');
       }
     };
     fetchReservations();
