@@ -19,7 +19,8 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
-    "import/no-cycle": "off"
+    "import/no-cycle": "off",
+    "default-param-last": 1
   },
   "overrides": [
     {
