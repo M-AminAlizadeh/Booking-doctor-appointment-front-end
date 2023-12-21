@@ -11,7 +11,7 @@ function DoctorsList({ doctorsList, setDoctors }) {
     const fetchData = async () => {
       const APITOKEN = window.sessionStorage.getItem('APITOKEN');
       if (APITOKEN) {
-        const response = await fetch('https://booking-doctor-iqa1.onrender.com/v1/doctors', {
+        const response = await fetch('http://127.0.0.1:3000/v1/doctors', {
           headers: {
             Authorization: `${APITOKEN}`,
           },

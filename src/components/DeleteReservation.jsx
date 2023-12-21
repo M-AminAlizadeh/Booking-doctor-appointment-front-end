@@ -9,7 +9,7 @@ function DeleteReservation() {
     const fetchReservations = async () => {
       const APITOKEN = window.sessionStorage.getItem('APITOKEN');
       if (APITOKEN) {
-        const response = await fetch('https://booking-doctor-iqa1.onrender.com/v1/reservations', {
+        const response = await fetch('http://127.0.0.1:3000/v1/reservations', {
           headers: {
             Authorization: `${APITOKEN}`,
           },
@@ -30,7 +30,7 @@ function DeleteReservation() {
     const itemId = e.target.id;
     const responseDelete = async () => {
       const APITOKEN = window.sessionStorage.getItem('APITOKEN');
-      const res = await fetch(`https://booking-doctor-iqa1.onrender.com/v1/reservations/${itemId}`, {
+      const res = await fetch(`http://127.0.0.1:3000/v1/reservations/${itemId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `${APITOKEN}`,

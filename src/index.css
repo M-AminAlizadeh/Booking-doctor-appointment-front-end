@@ -31,7 +31,7 @@
   background-color: var(--primary-color-light-green);
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1200px) {
   .carousel-btns,
   .carousel-container {
     display: none !important;
