@@ -36,6 +36,8 @@ function Navbar() {
             <Link to="/reservations" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer">My Reservations</Link>
             <Link to="/add-reservation" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer">Add Reservation</Link>
             <Link to="/delete-reservation" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer">Delete Reservation</Link>
+            <Link to="/add-doctor" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer">Add Doctor</Link>
+            <Link to="/delete-doctor" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer">Delete Doctor</Link>
             <Link to="/log-in" className="remove-underline-from-links text-secondary list-group-item fw-bold fs-5 cursor-pointer" onClick={submitSignout}>Sign out</Link>
           </ul>
 

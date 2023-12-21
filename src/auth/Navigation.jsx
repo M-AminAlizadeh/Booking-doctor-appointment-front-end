@@ -7,6 +7,8 @@ import AddReservation from '../components/AddReservation';
 import DeleteReservation from '../components/DeleteReservation';
 import DoctorDetails from '../components/DoctorDetails';
 import DoctorDetailsAddReservation from '../components/DoctorDetailsAddReservation';
+import AddDoctor from '../components/AddDoctor';
+import DeleteDoctor from '../components/DeleteDoctor';
 import NotFound from '../components/NotFound';
 
 const Navigation = [
@@ -53,6 +55,16 @@ const Navigation = [
   {
     path: '/delete-reservation',
     element: <Layout component={<DeleteReservation />} />,
+    isPrivate: true,
+  },
+  {
+    path: '/add-doctor',
+    element: <Layout component={<AddDoctor />} />,
+    isPrivate: true,
+  },
+  {
+    path: '/delete-doctor',
+    element: <Layout component={<DeleteDoctor />} />,
     isPrivate: true,
   },
 ];
