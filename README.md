@@ -60,15 +60,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Frontend Live Demo](https://booking-doctor-appointment-front-e6pwt8bi5-m-aminalizadeh.vercel.app/)
-- [Backend Documentation]()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
