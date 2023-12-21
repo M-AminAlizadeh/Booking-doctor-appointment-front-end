@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import RenderNavigation from './RenderNavigation';
 
 const AuthContext = createContext();
-const APIURL = 'https://booking-doctor-iqa1.onrender.com/v1/users/';
+const APIURL = 'http://127.0.0.1:3000/v1/users/';
 export const AuthData = () => useContext(AuthContext);
 
 export function AuthWrapper() {
@@ -117,5 +117,3 @@ export function AuthWrapper() {
     </AuthContext.Provider>
   );
 }
-
-// Authenticated jamal@gmail.com
