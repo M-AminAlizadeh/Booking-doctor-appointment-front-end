@@ -97,6 +97,9 @@ To fully interact with the backend check this [repo](https://github.com/M-AminAl
 
 To run tests use `npm run test`
 
+### N.B 
+The Admin user can add and delete Doctors from the APP
+
 ### Deployment
 
 You can deploy this project using:
