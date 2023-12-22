@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color-light-green: #97bf0f;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Links hover effect */
+.remove-underline-from-links {
+  text-decoration: none;
+}
+
+.navbar-links-group a:hover {
+  background-color: var(--primary-color-light-green);
+  color: #fff !important;
+}
+
+/* Carousel */
+.carousel-btns:hover {
+  background-color: var(--primary-color-light-green);
+}
+
+.turn-back-btn-bg {
+  background-color: var(--primary-color-light-green);
+}
+
+@media (max-width: 1200px) {
+  .carousel-btns,
+  .carousel-container {
+    display: none !important;
+  }
+
+  .scroll-mode-doctors-list {
+    display: flex !important;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .menu-button {
+    display: flex !important;
+  }
+}
