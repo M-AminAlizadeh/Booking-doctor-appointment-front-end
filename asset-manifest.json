@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Booking-doctor-appointment-front-end/static/css/main.37be10e6.css",
+    "main.js": "/Booking-doctor-appointment-front-end/static/js/main.27d4a4e5.js",
+    "index.html": "/Booking-doctor-appointment-front-end/index.html",
+    "main.37be10e6.css.map": "/Booking-doctor-appointment-front-end/static/css/main.37be10e6.css.map",
+    "main.27d4a4e5.js.map": "/Booking-doctor-appointment-front-end/static/js/main.27d4a4e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37be10e6.css",
+    "static/js/main.27d4a4e5.js"
+  ]
+}
