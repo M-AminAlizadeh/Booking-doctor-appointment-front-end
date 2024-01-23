@@ -8,7 +8,7 @@ function Reservations() {
     const fetchReservations = async () => {
       const APITOKEN = window.sessionStorage.getItem('APITOKEN');
       if (APITOKEN) {
-        const response = await fetch('http://127.0.0.1:3000/v1/reservations', {
+        const response = await fetch('https://booking-doctor-8x6t.onrender.com/v1/reservations', {
           headers: {
             Authorization: `${APITOKEN}`,
           },

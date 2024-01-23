@@ -14,7 +14,7 @@ export default function DoctorDetailsAddReservation() {
     const fetchData = async () => {
       const APITOKEN = window.sessionStorage.getItem('APITOKEN');
       if (APITOKEN) {
-        const responseUserInfo = await fetch('http://127.0.0.1:3000/v1/users/fetch_current_user', {
+        const responseUserInfo = await fetch('https://booking-doctor-8x6t.onrender.com/v1/users/fetch_current_user', {
           headers: {
             Authorization: `${APITOKEN}`,
           },
@@ -23,7 +23,7 @@ export default function DoctorDetailsAddReservation() {
           const responseData = await responseUserInfo.json();
           setName(responseData.data.name);
         }
-        const response = await fetch('http://127.0.0.1:3000/v1/doctors', {
+        const response = await fetch('https://booking-doctor-8x6t.onrender.com/v1/doctors', {
           headers: {
             Authorization: `${APITOKEN}`,
           },
@@ -50,7 +50,7 @@ export default function DoctorDetailsAddReservation() {
     const formattedDate = `${year}-${month}-${day}`;
 
     if (APITOKEN) {
-      const response = await fetch('http://127.0.0.1:3000/v1/reservations', {
+      const response = await fetch('https://booking-doctor-8x6t.onrender.com/v1/reservations', {
         method: 'POST',
         headers: {
           Authorization: `${APITOKEN}`,
