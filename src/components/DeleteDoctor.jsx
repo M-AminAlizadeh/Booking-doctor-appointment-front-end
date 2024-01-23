@@ -9,7 +9,7 @@ function DeleteDoctor() {
     const fetchDoctors = async () => {
       const APITOKEN = window.sessionStorage.getItem('APITOKEN');
       if (APITOKEN) {
-        const response = await fetch('http://127.0.0.1:3000/v1/doctors', {
+        const response = await fetch('https://booking-doctor-8x6t.onrender.com/v1/doctors', {
           headers: {
             Authorization: APITOKEN,
           },
@@ -30,7 +30,7 @@ function DeleteDoctor() {
     const itemId = e.target.id;
     const responseDelete = async () => {
       const APITOKEN = window.sessionStorage.getItem('APITOKEN');
-      const res = await fetch(`http://127.0.0.1:3000/v1/doctors/${itemId}`, {
+      const res = await fetch(`https://booking-doctor-8x6t.onrender.com/v1/doctors/${itemId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `${APITOKEN}`,

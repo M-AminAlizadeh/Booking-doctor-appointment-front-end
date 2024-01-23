@@ -14,7 +14,7 @@ function AddDoctor() {
     e.preventDefault();
     const APITOKEN = window.sessionStorage.getItem('APITOKEN');
     if (APITOKEN) {
-      const response = await fetch('http://localhost:3000/v1/doctors', {
+      const response = await fetch('https://booking-doctor-8x6t.onrender.com/v1/doctors', {
         method: 'POST',
         headers: {
           Authorization: `${APITOKEN}`,
